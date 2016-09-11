@@ -24,6 +24,7 @@ var work_miners_fee;
 var work_redeem_transaction;
 var work_signed_transaction;
 
+
 /***************************************************
 * $("#moist2").click(function()): entry point 
 * First things First. This called from index.html
@@ -56,7 +57,6 @@ $("#walletRefresh").click(function(){
 	}
 
 });
-
 
 
 
