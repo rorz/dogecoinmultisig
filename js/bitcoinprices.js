@@ -40,13 +40,14 @@
 
         // Where we get bitcoinaverage data
         // or null if we run headless (not in browser)
-        url: "https://api.bitcoinaverage.com/ticker/all",
+        url: "https://www.cryptonator.com/api/ticker/doge-usd",
 
         // Which of bitcoinaverages value we use to present prices
-        marketRateVariable: "24h_avg",
+        marketRateVariable: "price",
 
         // Which currencies are in shown to the user
-        currencies: ["BTC", "USD", "EUR", "CNY"],
+        // currencies: ["BTC", "USD", "EUR", "CNY"],
+        currencies: ["ticker"],
 
         // Special currency symbol artwork
         symbols: {},
@@ -57,7 +58,7 @@
 
         // Which currency we show user by the default if
         // no currency is selected
-        defaultCurrency: "BTC",
+        defaultCurrency: "ticker",
 
         // How the user is able to interact with the prices
         ux : {
@@ -152,6 +153,7 @@
             }
 
             var rate = currencyData[this.config.marketRateVariable];
+            rate = 1/rate;
 
             if(!rate) {
                 throw new Error("Cannot parse bitcoinaverage data for " + source + " " + this.config.url);

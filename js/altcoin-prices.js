@@ -6,22 +6,26 @@ $(document).ready(function() {
        bitcoinprices.init({
 
            // Where we get bitcoinaverage data
-           url: "https://api.bitcoinaverage.com/ticker/all",
+           url: "http://cors.io/?https://www.cryptonator.com/api/ticker/doge-usd", // This uses a cors.io proxy to avoid No 'Access-Control-Allow-Origin' (see http://cors.io/)
 
            // Which of bitcoinaverages value we use to present prices
-           marketRateVariable: "24h_avg",
+           marketRateVariable: "price",
 
            // Which currencies are in shown to the user
-           currencies: ["BTC", "USD", "EUR", "CNY"],
+           currencies: ["ticker", "BTC"],
 
            // Special currency symbol artwork
+
            symbols: {
-               "BTC": "<i class='fa fa-btc'></i>"
+               // "BTC": "<i class='fa fa-btc'></i>"
+               "ticker": "DOGE",
+               "BTC": "USD"
            },
+
 
            // Which currency we show user by the default if
            // no currency is selected
-           defaultCurrency: "BTC",
+           defaultCurrency: "ticker",
 
            // How the user is able to interact with the prices
            ux : {
@@ -48,7 +52,7 @@ $(document).ready(function() {
            // E.g. if your shop prices are in USD
            // but converted to BTC when you do Bitcoin
            // checkout, put USD here.
-           priceOrignalCurrency: "BTC"
+           priceOrignalCurrency: "ticker"
 
        });
    });
