@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 
@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
 		<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
 		<link rel="stylesheet" href="css/style.css" media="screen">
-		
+
 		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="js/moment.min.js"></script>
 		<script type="text/javascript" src="js/transition.js"></script>
@@ -42,6 +42,9 @@
 		<script type="text/javascript" src="js/ramin.js"></script>
 		<script type="text/javascript" src="js/tripleshibe.js"></script>
 		<script type="text/javascript" src="js/payspot.js"></script>
+
+        <script type="text/javascript" src="js/bitcoinprices.js"></script>
+        <script type="text/javascript" src="js/altcoin-prices.js"></script>
 	</head>
 
 	<body>
@@ -171,7 +174,7 @@
 										<p>Use the form below to open a wallet and begin using this service.</p>
 
 										<div class="alert alert-warning">
-											<b>Notice</b>: Different email address and password combination will open different wallets, be careful when entering your details as lost accounts can not be recovered! 
+											<b>Notice</b>: Different email address and password combination will open different wallets, be careful when entering your details as lost accounts can not be recovered!
 										</div>
 
 										<input id="openEmail" type="email" class="form-control" placeholder="Email address" required autofocus>
@@ -286,7 +289,7 @@
 							<p></p>
 							<p>Codes:</p>
 							<!--p>99 get doge network info.</p-->
-							<p>100 send Signed Transaction </p> 
+							<p>100 send Signed Transaction </p>
 							<p>777 get Balance for Ðogecoin address</p>
 							<p>778 get Unspent transactions for Ðogecoin address</p>
 							<p>779 get info about a txid</p>
@@ -375,7 +378,7 @@
 		<p>A Multi-Signature &ETH;ogecoin address, or Multisig, is a special &ETH;ogecoin address that is created from one or more regular &ETH;ogecoin Addresses. &ETH;ogecoin multisigs always start with an 'A' or a '9' (regular addresses start with a 'D'). Multisigs do not have a random number generator but instead are created from combinations of Public Keys.</p>
 		<p>Here is a sample multisig Address: 9sxA7zvcNyJ57W7vND3CfrqaocrEid2p8Z.</p>
 		<p>Multisigs can be powerful tools. We're really just learning about their potential.</p>
-		
+
 		<p><strong>More about Multisigs:</strong><strong> Key Holders</strong>,<strong> PRIVATE KEYS</strong> and<strong> Signatures</strong></p>
 		<p>Multisigs have<strong> Key Holders</strong>. These are individuals who are assigned to hold a<strong> PRIVATE KEY</strong>, which is basically a string of 50 or so random looking characters and digits(don't lose it).One Key Holder can hold multiple keys, as in the case of<strong> Personal Use.</strong></p>
 
@@ -399,7 +402,7 @@
 		<p>This website is an interface to the Dogecoin Network, and while it is tuned for handling multi-signature transactions, non-multisig Dogecoin addresses (the regular ones) can also be used here. The website is designed to be usable offline.</p>
 		<p>Compatible with dogecoin-qt</p>
 		<p>Privacy: Keys are generated on client side and we never ever see them. Nor do we want to see them.</p>
-		<p>Contact: u/tomcarbon</p> 
+		<p>Contact: u/tomcarbon</p>
 		<h3><strong>Thank You</strong></h3>
 </div>
 					<div class="tab-pane tab-content" id="menuHowTo">
@@ -540,7 +543,7 @@
                                                                                         </button>
                                                                                 </span>
                                                                                 <span class="input-group-btn">
-                                                                                        <button class="qrcodeBtn btn btn-default" type="button" data-toggle="modal" 
+                                                                                        <button class="qrcodeBtn btn btn-default" type="button" data-toggle="modal"
                                                                                         data-target="#modalQrcode"><span class="glyphicon glyphicon-qrcode"></span>
                                                                                         </button>
                                                                                 </span>
@@ -633,7 +636,7 @@
 											</button>
 										</span>
                                                                                 <span class="input-group-btn">
-                                                                                        <button class="qrcodeBtn btn btn-default" type="button" data-toggle="modal" 
+                                                                                        <button class="qrcodeBtn btn btn-default" type="button" data-toggle="modal"
 											data-target="#modalQrcode"><span class="glyphicon glyphicon-qrcode"></span>
 											</button>
                                                                                 </span>
@@ -768,7 +771,7 @@
                                                                 </div>
                                                                 <br>
 							<hr>
-							<h3>1/3 Checking Account <small> aka Slush Fund</small></h3> 
+							<h3>1/3 Checking Account <small> aka Slush Fund</small></h3>
 								<div class="input-group">
 									<span class="input-group-addon">Address:</span>
 									<input id="tsMiniAddress1" type="text" class="form-control address" value="" readonly>
@@ -1003,8 +1006,8 @@
 
 						<!-- removed until it works20160914input type="button" class="btn btn-warning btn-xs" value="Reset this Page" 	id="bankSuiteReset"-->
 						<hr size="5">
-						<input type="button" class="btn btn-info btn-xs" value="Make New Suite Keys" 
-							id="bankSuiteNewKeys"> or enter the <b>Public Suite Key</b> below (or 2 public keys) and click <button type="button" 
+						<input type="button" class="btn btn-info btn-xs" value="Make New Suite Keys"
+							id="bankSuiteNewKeys"> or enter the <b>Public Suite Key</b> below (or 2 public keys) and click <button type="button"
 							class="btn btn-danger btn-xs" id="bankSuiteLoad">here</button>
 						<textarea type="text" id="bankSuitePubKey1" class="form-control" placeholder="Insert Suite Key or Public Key here" cols="66" rows="1"></textarea>
 						<textarea type="text" id="bankSuitePubKey2" class="form-control" placeholder="(optional:) Insert another Public Key here" rows="1" cols="66"></textarea>
@@ -1301,7 +1304,7 @@
 							<p><small>(if you would like to use an Arbitrator, visit the Create Multisig page!)</small></p>
 								<p><small>The Arbitrator public key:</small></p>
 							<div class="input-group">
-								<input id="bankSuiteArbitratorKey" type="text" class="form-control address" 
+								<input id="bankSuiteArbitratorKey" type="text" class="form-control address"
 								value="044ddc503c9523b8ad8f4f16d19219502b1990ff78a8fd318dcfe574453f5b3f0c5818e4bb8d48b93f1f1e45110f0f36e1191600fbefc1dcaab422ed7a62069d53" readonly>
 								<span class="input-group-btn">
 									<button class="qrcodeBtn btn btn-default" type="button" data-toggle="modal" data-target="#modalQrcode">
@@ -1333,7 +1336,7 @@
 							</div>
 
 							<div class="col-md-3">
-								<p class="alert alert-info"><span class="glyphicon glyphicon-info-sign"></span> 
+								<p class="alert alert-info"><span class="glyphicon glyphicon-info-sign"></span>
 								<a href="javascript:;" data-toggle="modal" data-target="#modalMediator">
 								<abbr>Add an arbitrator</abbr></a></p>
 							</div>
@@ -1476,6 +1479,9 @@
 					<div class="tab-pane tab-content" id="redeemMultiSig">
 						<a href="http://dogecoinmultisig.org" ><img src="images/dcmslogo3.jpg" style="height:180px" ></a>
 						<h2>WITHDRAW <small>(redeem)</small> from your Multisig <small>(or your regular Dogecoin Address)</small></h2>
+                        <p>
+    <div>Example price: <span data-btc-price="1.0">1.0 BTC</span></div>
+</p>
 						<hr>
 						<input type="button" class="btn btn-warning btn-xs" value="Reset Everything and Start Over" 	id="redeemVerifyReset">
 						<p><b>Address to pay from:</b></p>
@@ -1520,17 +1526,17 @@
                                                         <label>When all those are filled out, press this button:</label>
 							<input type="button" class="btn btn-primary" value="NEXT" id="redeemit">
                                                 </div>
-						
+
                                                 <div id="pleaseWaitBox" class="alert alert-warning hidden">
 							<br>
                                                         <label>Please Wait....</label>
 							<p><small>(this may take a moment for larger transactions)</small></p>
 							<br>
                                                 </div>
-						
+
                                                 <div id="transactionCreate2" class="alert alert-success hidden">
                                                         <label>A Successful Sign</label>
-                                                        <button class="qrcodeBtn btn btn-default" type="button" data-toggle="modal" data-target="#modalQrcode" 
+                                                        <button class="qrcodeBtn btn btn-default" type="button" data-toggle="modal" data-target="#modalQrcode"
 								style="float:right;"><span class="glyphicon glyphicon-qrcode"></span>
 							</button>
 
@@ -1572,7 +1578,7 @@
                                                         <p>Are any fields missing from your form? Are the fields as expected? </p>
 							<p><small>(ie: Didn't put the amount where the To Addr: should be, etc)</small></p>
 							<p>Is there enough money in the account to clear the transaction?</p>
-							<p><b>Please try again.</b></p>  
+							<p><b>Please try again.</b></p>
                                                 </div>
 
                                                 <div id="withdrawlSuccessBox" class="alert alert-success hidden">
@@ -1991,7 +1997,7 @@
 						<!--a href="#settings" style="float:right;"><span class="glyphicon glyphicon-cog"></span></a-->
 						<p>Enter your txid here:</p>
 						<textarea type="text" id="dogeScript3" class="form-control" style="height:125px"></textarea>
-						
+
 						<div>
 						<input type="button" class="btn btn-primary" value="BROADCAST (online)" id="testola"-->
 						</div>
@@ -2077,7 +2083,7 @@
 					<div class="tab-pane tab-content" id="dev">
 						<h2>Development <small>Javascript framework, API and more</small></h2>
 						<div class="alert alert-info">This section is currently under development and is subject to change.</div>
-						
+
 					</div>
 
 					<div class="tab-pane tab-content" id="about">
@@ -2160,7 +2166,7 @@
 								</select>
 							</div>
 						</div>
-							
+
 						<hr>
 
 						<div class="row">
@@ -2291,9 +2297,9 @@
 						<div class="col-md-5">
 							<label>Mediator:</label>
 
-							<!-- 
-								You need to contact us before adding your pubkey 
-								and submitting a pull request on github. 
+							<!--
+								You need to contact us before adding your pubkey
+								and submitting a pull request on github.
 
 								format is: pubkey;email;fee
 							-->
@@ -2308,12 +2314,12 @@
 
 						<div class="col-md-5">
 							<label>Address:</label> <span class="text-muted">(for disputes)</span>
-							<input id="mediatorEmail" type="text" class="form-control address" value="" readonly>	
+							<input id="mediatorEmail" type="text" class="form-control address" value="" readonly>
 						</div>
 
 						<div class="col-md-2">
-							<label>Fee (%):</label> 
-							<input id="mediatorFee" type="text" class="form-control address" value="" readonly>	
+							<label>Fee (%):</label>
+							<input id="mediatorFee" type="text" class="form-control address" value="" readonly>
 						</div>
 
 					</div>
