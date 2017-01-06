@@ -1,12 +1,45 @@
 // This is a custom wrapper for https://github.com/miohtama/bitcoin-prices (contained in 'bicoinprices.js')
 
-
+var isInit = false;
 
 $(document).ready(function() {
+
+    function myFunc(){
+     console.log('registering much input!');
+
+     var textAreaValue = $('#dogeScript6').val();
+
+     if (isNaN(textAreaValue) || textAreaValue === "") {
+         textAreaValue = "0.0";
+     }
+
+     console.log("text area value == " + textAreaValue);
+
+     $('#amountTicker').attr('data-btc-price', textAreaValue);
+     console.log("didn't get so far");
+
+     if (isInit) {
+         bitcoinprices.updatePrices();
+     }
+
+ }
+ myFunc();
+
+ //or this
+ $('#dogeScript6').keyup(function(){
+     myFunc();
+ });
+
+ //and this for good measure
+ $('#dogeScript6').change(function(){
+     myFunc(); //or direct assignment $('#txtHere').html($(this).val());
+ });
+
        bitcoinprices.init({
 
            // Where we get bitcoinaverage data
-           url: "http://cors.io/?https://www.cryptonator.com/api/ticker/doge-usd", // This uses a cors.io proxy to avoid No 'Access-Control-Allow-Origin' (see http://cors.io/)
+           url: "https://api.cryptonator.com/api/ticker/doge-usd", // This uses a cors.io proxy to avoid No 'Access-Control-Allow-Origin' (see http://cors.io/)
+           // no it doesn't
 
            // Which of bitcoinaverages value we use to present prices
            marketRateVariable: "price",
@@ -55,4 +88,7 @@ $(document).ready(function() {
            priceOrignalCurrency: "ticker"
 
        });
+
+       isInit = true;
+
    });

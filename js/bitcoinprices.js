@@ -100,8 +100,9 @@
             $.getJSON(self.config.url, function(resp) {
                 self.data = resp;
                 $(document).trigger("marketdataavailable");
-            }).error(function() {
-                throw new Error("Could not load exchage rate data from:" + self.config.url);
+            }).error(function(xhr, status, error) {
+                // var err = eval("(" + xhr.responseText + ")");
+                throw new Error("Could not load exchage rate data from:" + self.config.url + " with error: " + xhr.responseText);
             });
         },
 
